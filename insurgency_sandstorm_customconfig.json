@@ -1661,6 +1661,22 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Round Won Once Win Limit Reached",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Multiplayer:tune:3",
+        "Description": "When enabled, the server advances after a round is won once the win limit is reached.",
+        "Keywords": "Rounds,Win,Rotation",
+        "FieldName": "bRoundWonOnceWinLimitReached",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "/Script/Insurgency.INSMultiplayerMode.bRoundWonOnceWinLimitReached",
+        "DefaultValue": "True",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        }
+    },
+    {
         "DisplayName": "Game Time Limit",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Multiplayer:tune:3",
