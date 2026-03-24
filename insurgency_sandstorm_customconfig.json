@@ -1120,13 +1120,14 @@
         "Special": "listfile:./insurgencysandstorm/581330/Insurgency/Config/Server/MapCycle.txt"
     },
     {
-        "DisplayName": "Mods",
-        "Description": "Define a list of Mods for the server to use.",
+        "DisplayName": "Workshop Mods",
+        "Description": "Add one Steam Workshop ID per line. Use the list editor to add, remove, and reorder mods without editing a single comma-separated string.",
         "FieldName": "Mods",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
         "InputType": "list",
-        "Special": "listfile:./insurgencysandstorm/581330/Insurgency/Config/Server/Mods.txt"
+        "Special": "listfile:./insurgencysandstorm/581330/Insurgency/Config/Server/Mods.txt",
+        "Placeholder": "1234567890"
     },
     {
         "DisplayName": "Kill Feed Enabled",
