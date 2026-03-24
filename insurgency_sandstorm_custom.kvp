@@ -38,7 +38,7 @@ App.WindowsCommandLineArgs=
 App.CommandLineArgs={{StartupCommandLine}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"LD_LIBRARY_PATH":"./linux64:%LD_LIBRARY_PATH%","SteamAppId":"581320","HOME":"{{$FullBaseDir}}"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"./linux64:%LD_LIBRARY_PATH%","SteamAppId":"581320","HOME":"{{$FullBaseDir}}","XDG_CONFIG_HOME":"{{$FullBaseDir}}.config","XDG_DATA_HOME":"{{$FullBaseDir}}.local/share"}
 App.CommandLineParameterFormat=-{0}="{1}"
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=String

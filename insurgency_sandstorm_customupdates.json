@@ -29,6 +29,20 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "XDG Config Directory Creation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}.config/mod.io",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "XDG Data Directory Creation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}.local/share",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Base Config Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
