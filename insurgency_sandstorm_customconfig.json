@@ -254,7 +254,7 @@
         "IsFlagArgument": false,
         "ParamFieldName": "Game",
         "IncludeInCommandLine": false,
-        "DefaultValue": "",
+        "DefaultValue": "Checkpoint",
         "EnumValues": {
             "": "None/Random",
             "CaptureTheBase": "Capture The Base",
