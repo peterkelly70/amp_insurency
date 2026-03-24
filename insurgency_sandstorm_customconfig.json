@@ -419,7 +419,7 @@
         "IsFlagArgument": false,
         "ParamFieldName": "mutators",
         "IncludeInCommandLine": true,
-        "DefaultValue": "{{MutatorAllYouCanEat}}{{MutatorAntiMaterielRiflesOnly}}{{MutatorBoltActionsOnly}}{{MutatorBroke}}{{MutatorBulletSponge}}{{MutatorCompetitive}}{{MutatorCompetitiveLoadouts}}{{MutatorFastMovement}}{{MutatorFrenzy}}{{MutatorGuerrillas}}{{MutatorHardcore}}{{MutatorHeadshotOnly}}{{MutatorHotPotato}}{{MutatorLockedAim}}{{MutatorNoAim}}{{MutatorPistolsOnly}}{{MutatorShotgunsOnly}}{{MutatorSlowCaptureTimes}}{{MutatorSlowMovement}}{{MutatorSoldierOfFortune}}{{MutatorSpecialOperations}}{{MutatorStrapped}}{{MutatorUltralethal}}{{MutatorVampirism}}{{MutatorWarlords}}{{CustomMutators}}",
+        "DefaultValue": "{{MutatorAllYouCanEat}}{{MutatorAntiMaterielRiflesOnly}}{{MutatorBoltActionsOnly}}{{MutatorBroke}}{{MutatorBudgetAntiquing}}{{MutatorBulletSponge}}{{MutatorCompetitive}}{{MutatorCompetitiveLoadouts}}{{MutatorFastMovement}}{{MutatorFullyLoaded}}{{MutatorFrenzy}}{{MutatorGuerrillas}}{{MutatorGunslingers}}{{MutatorHardcore}}{{MutatorHeadshotOnly}}{{MutatorHotPotato}}{{MutatorLockedAim}}{{MutatorMakarovsOnly}}{{MutatorNoAim}}{{MutatorNoDrops}}{{MutatorPistolsOnly}}{{MutatorPoor}}{{MutatorShotgunsOnly}}{{MutatorSlowCaptureTimes}}{{MutatorSlowMovement}}{{MutatorSoldierOfFortune}}{{MutatorSpecialOperations}}{{MutatorStrapped}}{{MutatorUltralethal}}{{MutatorVampirism}}{{MutatorWarlords}}{{CustomMutators}}",
         "EnumValues": {},
         "SkipIfEmpty": true
     },
@@ -492,6 +492,23 @@
         }
     },
     {
+        "DisplayName": "Mutator: Budget Antiquing",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Start with 3 supply points.",
+        "Keywords": "Mutator,BudgetAntiquing",
+        "FieldName": "MutatorBudgetAntiquing",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorBudgetAntiquing",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "BudgetAntiquing,"
+        }
+    },
+    {
         "DisplayName": "Mutator: Bullet Sponge",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -560,6 +577,23 @@
         }
     },
     {
+        "DisplayName": "Mutator: Fully Loaded",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "All weapons, equipment, and explosives in the game are available in the Loadout Menu.",
+        "Keywords": "Mutator,FullyLoaded",
+        "FieldName": "MutatorFullyLoaded",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorFullyLoaded",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "FullyLoaded,"
+        }
+    },
+    {
         "DisplayName": "Mutator: Frenzy",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -591,6 +625,23 @@
         "EnumValues": {
             "False": "",
             "True": "Guerrillas,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Gunslingers",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Kill the enemy more than they kill you with a big stinkin' revolver. And explosives.",
+        "Keywords": "Mutator,Gunslingers",
+        "FieldName": "MutatorGunslingers",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorGunslingers",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Gunslingers,"
         }
     },
     {
@@ -662,6 +713,23 @@
         }
     },
     {
+        "DisplayName": "Mutator: Makarovs Only",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Makarovs are the only option.",
+        "Keywords": "Mutator,MakarovsOnly",
+        "FieldName": "MutatorMakarovsOnly",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorMakarovsOnly",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "MakarovsOnly,"
+        }
+    },
+    {
         "DisplayName": "Mutator: No Aim",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -679,6 +747,23 @@
         }
     },
     {
+        "DisplayName": "Mutator: No Drops",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "No scavenging allowed.",
+        "Keywords": "Mutator,NoDrops",
+        "FieldName": "MutatorNoDrops",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorNoDrops",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "NoDrops,"
+        }
+    },
+    {
         "DisplayName": "Mutator: Pistols Only",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -693,6 +778,23 @@
         "EnumValues": {
             "False": "",
             "True": "PistolsOnly,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Poor",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Start with limited supply.",
+        "Keywords": "Mutator,Poor",
+        "FieldName": "MutatorPoor",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorPoor",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Poor,"
         }
     },
     {
