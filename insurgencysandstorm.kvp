@@ -1,4 +1,4 @@
-Meta.DisplayName=Insurgency Sandstorm
+Meta.DisplayName=Insurgency Sandstorm Custom
 Meta.Description=Insurgency Sandstorm Dedicated Server
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
@@ -24,9 +24,9 @@ Meta.NoCommercialUsage=False
 Meta.ConfigVersion=5
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
-Meta.AppConfigId=684b4b01-ddbc-4079-9e76-1520c61fb487
+Meta.AppConfigId=6eda2d61-f24e-4822-a369-61a625ef1a9b
 Meta.ImportableExtensions=[]
-App.DisplayName=InsurgencySandstorm
+App.DisplayName=InsurgencySandstormCustom
 App.RootDir=./insurgencysandstorm/
 App.BaseDirectory=./insurgencysandstorm/581330/
 App.SteamWorkshopDownloadLocation=
