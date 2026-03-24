@@ -1120,14 +1120,15 @@
         "Special": "listfile:./insurgencysandstorm/581330/Insurgency/Config/Server/MapCycle.txt"
     },
     {
-        "DisplayName": "Workshop Mods",
-        "Description": "Add one Steam Workshop ID per line. Use the list editor to add, remove, and reorder mods without editing a single comma-separated string.",
+        "DisplayName": "Community Workshop Mods",
+        "Description": "Preloaded with the map pack you listed. Add, remove, and reorder one workshop ID at a time in the list editor.",
         "FieldName": "Mods",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
         "InputType": "list",
         "Special": "listfile:./insurgencysandstorm/581330/Insurgency/Config/Server/Mods.txt",
-        "Placeholder": "1234567890"
+        "DefaultValue": "[\"851078\",\"3563276\",\"3588452\",\"3320046\",\"94277\",\"100082\",\"3597921\",\"4630134\",\"4422455\",\"3597923\",\"3563275\",\"4969368\",\"1025221\",\"3257871\",\"109375\",\"1428343\"]",
+        "Placeholder": "851078"
     },
     {
         "DisplayName": "Kill Feed Enabled",
