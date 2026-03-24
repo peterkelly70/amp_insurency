@@ -1145,6 +1145,58 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Solo Enemies",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Checkpoint:tune:3",
+        "Description": "Enemy count used for solo checkpoint scaling.",
+        "Keywords": "Checkpoint,Bots,Enemies",
+        "FieldName": "SoloEnemies",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "/Script/Insurgency.INSCheckpointGameMode.SoloEnemies",
+        "DefaultValue": "8",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Minimum Enemies",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Checkpoint:tune:3",
+        "Description": "Minimum enemy count for checkpoint scaling.",
+        "Keywords": "Checkpoint,Bots,Enemies",
+        "FieldName": "MinimumEnemies",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "/Script/Insurgency.INSCheckpointGameMode.MinimumEnemies",
+        "DefaultValue": "8",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Maximum Enemies",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Checkpoint:tune:3",
+        "Description": "Maximum enemy count for checkpoint scaling.",
+        "Keywords": "Checkpoint,Bots,Enemies",
+        "FieldName": "MaximumEnemies",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "/Script/Insurgency.INSCheckpointGameMode.MaximumEnemies",
+        "DefaultValue": "40",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Max Players To Scale Enemy Count",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Checkpoint:tune:3",
+        "Description": "Maximum player count used when scaling enemy counts.",
+        "Keywords": "Checkpoint,Bots,Enemies",
+        "FieldName": "MaxPlayersToScaleEnemyCount",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "/Script/Insurgency.INSCheckpointGameMode.MaxPlayersToScaleEnemyCount",
+        "DefaultValue": "5",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Initial Supply Points",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Multiplayer:tune:3",
