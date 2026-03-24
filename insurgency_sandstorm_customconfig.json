@@ -419,15 +419,219 @@
         "IsFlagArgument": false,
         "ParamFieldName": "mutators",
         "IncludeInCommandLine": true,
-        "DefaultValue": "{{MutatorHotPotato}}{{MutatorVampirism}}{{CustomMutators}}",
+        "DefaultValue": "{{MutatorAllYouCanEat}}{{MutatorAntiMaterielRiflesOnly}}{{MutatorBoltActionsOnly}}{{MutatorBroke}}{{MutatorBulletSponge}}{{MutatorCompetitive}}{{MutatorCompetitiveLoadouts}}{{MutatorFastMovement}}{{MutatorFrenzy}}{{MutatorGuerrillas}}{{MutatorHardcore}}{{MutatorHeadshotOnly}}{{MutatorHotPotato}}{{MutatorLockedAim}}{{MutatorNoAim}}{{MutatorPistolsOnly}}{{MutatorShotgunsOnly}}{{MutatorSlowCaptureTimes}}{{MutatorSlowMovement}}{{MutatorSoldierOfFortune}}{{MutatorSpecialOperations}}{{MutatorStrapped}}{{MutatorUltralethal}}{{MutatorVampirism}}{{MutatorWarlords}}{{CustomMutators}}",
         "EnumValues": {},
         "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Default Mutator: Hot Potato",
+        "DisplayName": "Mutator: All You Can Eat",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Adds the HotPotato mutator to the server mutator list.",
+        "Description": "Start with 100 supply points.",
+        "Keywords": "Mutator,AllYouCanEat",
+        "FieldName": "MutatorAllYouCanEat",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorAllYouCanEat",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "AllYouCanEat,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Anti-Materiel Rifles Only",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Only anti-materiel rifles are available along with normal equipment and explosives.",
+        "Keywords": "Mutator,AntiMaterielRiflesOnly",
+        "FieldName": "MutatorAntiMaterielRiflesOnly",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorAntiMaterielRiflesOnly",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "AntiMaterielRiflesOnly,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Bolt-Actions Only",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Only bolt-action rifles are available along with normal equipment and explosives.",
+        "Keywords": "Mutator,BoltActionsOnly",
+        "FieldName": "MutatorBoltActionsOnly",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorBoltActionsOnly",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "BoltActionsOnly,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Broke",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Start with 0 supply points.",
+        "Keywords": "Mutator,Broke",
+        "FieldName": "MutatorBroke",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorBroke",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Broke,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Bullet Sponge",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Health is increased.",
+        "Keywords": "Mutator,BulletSponge",
+        "FieldName": "MutatorBulletSponge",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorBulletSponge",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "BulletSponge,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Competitive",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Equipment is more expensive, rounds are shorter, and capturing objectives is faster.",
+        "Keywords": "Mutator,Competitive",
+        "FieldName": "MutatorCompetitive",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorCompetitive",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Competitive,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Competitive Loadouts",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Player classes are replaced with those from Competitive.",
+        "Keywords": "Mutator,CompetitiveLoadouts",
+        "FieldName": "MutatorCompetitiveLoadouts",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorCompetitiveLoadouts",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "CompetitiveLoadouts,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Fast Movement",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Move faster.",
+        "Keywords": "Mutator,FastMovement",
+        "FieldName": "MutatorFastMovement",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorFastMovement",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "FastMovement,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Frenzy",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Fight against AI enemies who only use melee attacks. Watch out for special enemies.",
+        "Keywords": "Mutator,Frenzy",
+        "FieldName": "MutatorFrenzy",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorFrenzy",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Frenzy,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Guerrillas",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Start with 5 supply points.",
+        "Keywords": "Mutator,Guerrillas",
+        "FieldName": "MutatorGuerrillas",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorGuerrillas",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Guerrillas,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Hardcore",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Mutator featuring slower movement speeds and longer capture times.",
+        "Keywords": "Mutator,Hardcore",
+        "FieldName": "MutatorHardcore",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorHardcore",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Hardcore,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Headshot Only",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Players only take damage when shot in the head.",
+        "Keywords": "Mutator,HeadshotOnly",
+        "FieldName": "MutatorHeadshotOnly",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorHeadshotOnly",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "HeadshotOnly,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Hot Potato",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "A live fragmentation grenade is dropped on death.",
         "Keywords": "Mutator,HotPotato",
         "FieldName": "MutatorHotPotato",
         "InputType": "checkbox",
@@ -441,10 +645,180 @@
         }
     },
     {
-        "DisplayName": "Default Mutator: Vampirism",
+        "DisplayName": "Mutator: Locked Aim",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Adds the Vampirism mutator to the server mutator list.",
+        "Description": "Weapons always point to the center of the screen.",
+        "Keywords": "Mutator,LockedAim",
+        "FieldName": "MutatorLockedAim",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorLockedAim",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "LockedAim,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: No Aim",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Aiming down sights is disabled.",
+        "Keywords": "Mutator,NoAim",
+        "FieldName": "MutatorNoAim",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorNoAim",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "NoAim,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Pistols Only",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Only pistols are available along with normal equipment and explosives.",
+        "Keywords": "Mutator,PistolsOnly",
+        "FieldName": "MutatorPistolsOnly",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorPistolsOnly",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "PistolsOnly,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Shotguns Only",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Only shotguns are available along with normal equipment and explosives.",
+        "Keywords": "Mutator,ShotgunsOnly",
+        "FieldName": "MutatorShotgunsOnly",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorShotgunsOnly",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "ShotgunsOnly,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Slow Capture Times",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Objectives will take longer to capture.",
+        "Keywords": "Mutator,SlowCaptureTimes",
+        "FieldName": "MutatorSlowCaptureTimes",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorSlowCaptureTimes",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "SlowCaptureTimes,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Slow Movement",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Move slower.",
+        "Keywords": "Mutator,SlowMovement",
+        "FieldName": "MutatorSlowMovement",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorSlowMovement",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "SlowMovement,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Soldier Of Fortune",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Gain supply points as your score increases.",
+        "Keywords": "Mutator,SoldierOfFortune",
+        "FieldName": "MutatorSoldierOfFortune",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorSoldierOfFortune",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "SoldierOfFortune,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Special Operations",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Start with 30 supply points.",
+        "Keywords": "Mutator,SpecialOperations",
+        "FieldName": "MutatorSpecialOperations",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorSpecialOperations",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "SpecialOperations,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Strapped",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Start with 1 supply point.",
+        "Keywords": "Mutator,Strapped",
+        "FieldName": "MutatorStrapped",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorStrapped",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Strapped,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Ultralethal",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Everyone dies with one shot.",
+        "Keywords": "Mutator,Ultralethal",
+        "FieldName": "MutatorUltralethal",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MutatorUltralethal",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "Ultralethal,"
+        }
+    },
+    {
+        "DisplayName": "Mutator: Vampirism",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Receive health when dealing damage to enemies equal to the amount of damage dealt.",
         "Keywords": "Mutator,Vampirism",
         "FieldName": "MutatorVampirism",
         "InputType": "checkbox",
@@ -458,20 +832,21 @@
         }
     },
     {
-        "DisplayName": "Custom Mutators",
+        "DisplayName": "Mutator: Warlords",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Comma-separated list of any extra mutators you want to add. Leave blank if you only want the default checkbox mutators above.",
-        "Keywords": "Mutator,Custom",
-        "FieldName": "CustomMutators",
-        "InputType": "text",
+        "Description": "Start with 10 supply points.",
+        "Keywords": "Mutator,Warlords",
+        "FieldName": "MutatorWarlords",
+        "InputType": "checkbox",
         "IsFlagArgument": false,
-        "ParamFieldName": "CustomMutators",
+        "ParamFieldName": "MutatorWarlords",
         "IncludeInCommandLine": false,
         "DefaultValue": "",
-        "EnumValues": {},
-        "Placeholder": "HotPotato,Vampirism",
-        "SkipIfEmpty": true
+        "EnumValues": {
+            "False": "",
+            "True": "Warlords,"
+        }
     },
     {
         "DisplayName": "Rule Set",
