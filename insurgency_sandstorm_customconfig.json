@@ -952,7 +952,7 @@
         "IsFlagArgument": false,
         "ParamFieldName": "Mods_enabled",
         "IncludeInCommandLine": false,
-        "DefaultValue": "",
+        "DefaultValue": "True",
         "EnumValues": {
             "False": "",
             "True": "-Mods -ModList=Mods"
