@@ -21,6 +21,7 @@ import argparse
 import dataclasses
 import hashlib
 import json
+import re
 import shutil
 import sys
 import urllib.request
@@ -46,7 +47,7 @@ class ModFile:
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--mods-file", required=True, type=Path, help="Path to Mods.txt")
+    p.add_argument("--mods-file", type=Path, help="Path to Mods.txt")
     p.add_argument(
         "--content-dir",
         required=True,
@@ -81,6 +82,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Do not remove the target mod directory before extracting",
     )
+    p.add_argument(
+        "--amp-root",
+        type=Path,
+        help="AMP instance root (contains GenericModule.kvp). Used when Mods.txt is missing.",
+    )
     return p.parse_args()
 
 
@@ -92,6 +98,46 @@ def read_mod_ids(mods_file: Path) -> list[str]:
             continue
         mods.append(line)
     return mods
+
+
+def read_mod_ids_from_amp(instance_root: Path) -> list[str]:
+    kvp = instance_root / "GenericModule.kvp"
+    if not kvp.exists():
+        raise FileNotFoundError(f"GenericModule.kvp not found at {kvp}")
+
+    app_settings_json = None
+    for raw in kvp.read_text(encoding="utf-8", errors="ignore").splitlines():
+        if raw.startswith("App.AppSettings="):
+            app_settings_json = raw.split("=", 1)[1].strip()
+            break
+
+    if not app_settings_json:
+        raise RuntimeError(f"No App.AppSettings line found in {kvp}")
+
+    settings = json.loads(app_settings_json)
+    mods = settings.get("Mods")
+    if isinstance(mods, str):
+        try:
+            mods = json.loads(mods)
+        except json.JSONDecodeError:
+            mods = [m.strip() for m in re.split(r"[,\s]+", mods) if m.strip()]
+
+    if not isinstance(mods, list):
+        raise RuntimeError(f"App.AppSettings Mods field is not a list in {kvp}")
+
+    return [str(m).strip() for m in mods if str(m).strip()]
+
+
+def find_amp_root(start: Path) -> Optional[Path]:
+    candidates = [start, *start.parents]
+    for base in candidates:
+        direct = base / "GenericModule.kvp"
+        if direct.exists():
+            return base
+        nested = base / "AMP" / "GenericModule.kvp"
+        if nested.exists():
+            return base / "AMP"
+    return None
 
 
 def build_headers(token: str, token_mode: str, platform: str) -> dict[str, str]:
@@ -193,11 +239,17 @@ def main() -> int:
     args = parse_args()
     api_base = args.api_base or DEFAULT_API_BASE
 
-    if not args.mods_file.exists():
-        print(f"Mods file not found: {args.mods_file}", file=sys.stderr)
-        return 2
+    mod_ids: list[str] = []
+    if args.mods_file and args.mods_file.exists():
+        mod_ids = read_mod_ids(args.mods_file)
+    else:
+        amp_root = args.amp_root or find_amp_root(args.content_dir) or find_amp_root(Path.cwd())
+        if amp_root is None:
+            print("Mods.txt not found and AMP root could not be discovered.", file=sys.stderr)
+            return 2
+        mod_ids = read_mod_ids_from_amp(amp_root)
+        print(f"Loaded {len(mod_ids)} mod IDs from {amp_root / 'GenericModule.kvp'}")
 
-    mod_ids = read_mod_ids(args.mods_file)
     if not mod_ids:
         print("No mod IDs found in Mods.txt", file=sys.stderr)
         return 1

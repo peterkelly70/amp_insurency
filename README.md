@@ -28,4 +28,13 @@ python3 scripts/modio_download_mods.py \
   --token "$MODIO_TOKEN"
 ```
 
+If `Mods.txt` has not been created yet, the script can fall back to AMP's live config:
+
+```bash
+python3 scripts/modio_download_mods.py \
+  --content-dir /AMP/insurgencysandstorm/581330/Steam/steamapps/workshop/content/581330 \
+  --amp-root /AMP \
+  --token "$MODIO_TOKEN"
+```
+
 When publishing to AMP's configuration repository, the same files must be placed at the repository root with the same lowercase names.
