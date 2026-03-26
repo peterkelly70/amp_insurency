@@ -285,8 +285,8 @@
         "IsFlagArgument": false,
         "ParamFieldName": "DefaultStartupCommandLine",
         "IncludeInCommandLine": false,
-        "DefaultValue": "{{Map}}?Scenario=\"{{Scenario}}\"?Lighting=\"{{Lighting}}\"?Game=\"{{Game}}\"?Hostname=\"{{Hostname}}\"?MaxPlayers=\"{{$MaxUsers}}\"?password=\"{{password}}\" -Port={{$ApplicationPort1}} -QueryPort={{$ApplicationPort2}} -Rcon -RconPassword={{$RemoteAdminPassword}} -RconListenPort={{$RemoteAdminPort}} -log -GameStats -GameStatsToken={{GameStatsToken}} -GSLTToken={{GSLTToken}} {{Mods_enabled}} {{UseEAC}} {{EnableCheats}}{{$FormattedArgs}}",
-        "Placeholder": "{{Map}}?Scenario=\"{{Scenario}}\"?Lighting=\"{{Lighting}}\"?Game=\"{{Game}}\"?...",
+        "DefaultValue": "{{DefaultModTravelTo}}?Hostname=\"{{Hostname}}\"?MaxPlayers=\"{{$MaxUsers}}\"?password=\"{{password}}\" -Port={{$ApplicationPort1}} -QueryPort={{$ApplicationPort2}} -Rcon -RconPassword={{$RemoteAdminPassword}} -RconListenPort={{$RemoteAdminPort}} -log -GameStats -GameStatsToken={{GameStatsToken}} -GSLTToken={{GSLTToken}} {{Mods_enabled}} {{UseEAC}} {{EnableCheats}}{{$FormattedArgs}}",
+        "Placeholder": "Embassy?Scenario=Scenario_Embassy_Checkpoint_Security?Lighting=Day?Game=Checkpoint?Hostname=\"My Server\" -Port=27102 -QueryPort=27131 -Rcon -RconPassword=... -RconListenPort=27015 -log -GameStats -GameStatsToken=... -GSLTToken=... -NoEAC {{$FormattedArgs}}",
         "EnumValues": {}
     },
     {
@@ -300,8 +300,8 @@
         "IsFlagArgument": false,
         "ParamFieldName": "CustomStartupCommandLine",
         "IncludeInCommandLine": false,
-        "DefaultValue": "{{Map}}?Scenario=\"{{Scenario}}\"?Lighting=\"{{Lighting}}\"?Game=\"{{Game}}\"?Hostname=\"{{Hostname}}\"?MaxPlayers=\"{{$MaxUsers}}\"?password=\"{{password}}\" -Port={{$ApplicationPort1}} -QueryPort={{$ApplicationPort2}} -Rcon -RconPassword={{$RemoteAdminPassword}} -RconListenPort={{$RemoteAdminPort}} -log -GameStats -GameStatsToken={{GameStatsToken}} -GSLTToken={{GSLTToken}} {{Mods_enabled}} {{UseEAC}} {{EnableCheats}}{{$FormattedArgs}}",
-        "Placeholder": "Drycanal?Scenario=Scenario_Drycanal_Checkpoint_Security?Lighting=Day?Game=Checkpoint?Hostname=\"My Server\" -Port=27102 -QueryPort=27131 -Rcon -RconPassword=... -RconListenPort=27015 -log -GameStats -GameStatsToken=... -GSLTToken=... -NoEAC {{$FormattedArgs}}",
+        "DefaultValue": "{{DefaultModTravelTo}}?Hostname=\"{{Hostname}}\"?MaxPlayers=\"{{$MaxUsers}}\"?password=\"{{password}}\" -Port={{$ApplicationPort1}} -QueryPort={{$ApplicationPort2}} -Rcon -RconPassword={{$RemoteAdminPassword}} -RconListenPort={{$RemoteAdminPort}} -log -GameStats -GameStatsToken={{GameStatsToken}} -GSLTToken={{GSLTToken}} {{Mods_enabled}} {{UseEAC}} {{EnableCheats}}{{$FormattedArgs}}",
+        "Placeholder": "Embassy?Scenario=Scenario_Embassy_Checkpoint_Security?Lighting=Day?Game=Checkpoint?Hostname=\"My Server\" -Port=27102 -QueryPort=27131 -Rcon -RconPassword=... -RconListenPort=27015 -log -GameStats -GameStatsToken=... -GSLTToken=... -NoEAC {{$FormattedArgs}}",
         "EnumValues": {}
     },
     {
