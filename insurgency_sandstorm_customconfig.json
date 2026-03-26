@@ -335,6 +335,21 @@
         "SkipIfEmpty": true
     },
     {
+        "DisplayName": "mod.io Access Token",
+        "Category": "Insurgency Sandstorm:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Set the mod.io server access token for this game. AMP writes this value into GameUserSettings.ini so Sandstorm can authenticate mod downloads.",
+        "Keywords": "mod.io,token,access token",
+        "FieldName": "ModioAccessToken",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ModioAccessToken",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {},
+        "SkipIfEmpty": true
+    },
+    {
         "DisplayName": "Game Stats Token",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
