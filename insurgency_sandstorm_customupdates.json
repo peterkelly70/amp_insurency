@@ -4,7 +4,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "581330",
-        "UpdateSourceArgs": "validate",
+        "UpdateSourceArgs": "581320",
         "SkipOnFailure": false
     },
     {
