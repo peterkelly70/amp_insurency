@@ -11,7 +11,7 @@
         "ParamFieldName": "Map",
         "IncludeInCommandLine": false,
         "DefaultValue": "Farmhouse",
-        "Placeholder": "Drycanal",
+        "Placeholder": "Embassy",
         "EnumValues": {}
     },
     {
@@ -1017,9 +1017,9 @@
         "IsFlagArgument": false,
         "ParamFieldName": "DefaultModTravelTo",
         "IncludeInCommandLine": false,
-        "DefaultValue": "Drycanal?Scenario=Scenario_Drycanal_Checkpoint_Security?Lighting=Day?Game=Checkpoint",
+        "DefaultValue": "Embassy?Scenario=Scenario_Embassy_Checkpoint_Security?Lighting=Day?Game=Checkpoint",
         "EnumValues": {},
-        "Placeholder": "Drycanal?Scenario=Scenario_Drycanal_Checkpoint_Security?Lighting=Day?Game=Checkpoint"
+        "Placeholder": "Embassy?Scenario=Scenario_Embassy_Checkpoint_Security?Lighting=Day?Game=Checkpoint"
     },
     {
         "DisplayName": "Custom Mod Travel To",
@@ -1034,7 +1034,7 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "",
         "EnumValues": {},
-        "Placeholder": "Canyon?Scenario=Scenario_Crossing_Checkpoint_Security?Lighting=Day?Game=Checkpoint",
+        "Placeholder": "Embassy?Scenario=Scenario_Embassy_Checkpoint_Security?Lighting=Day?Game=Checkpoint",
         "SkipIfEmpty": true
     },
     {
