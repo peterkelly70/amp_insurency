@@ -54,7 +54,7 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Target mod content directory (one subdir per mod id)",
     )
-    p.add_argument("--token", required=True, help="mod.io access token or API key")
+    p.add_argument("--token", help="mod.io access token or API key")
     p.add_argument(
         "--token-mode",
         choices=("bearer", "api-key"),
@@ -126,6 +126,27 @@ def read_mod_ids_from_amp(instance_root: Path) -> list[str]:
         raise RuntimeError(f"App.AppSettings Mods field is not a list in {kvp}")
 
     return [str(m).strip() for m in mods if str(m).strip()]
+
+
+def read_token_from_amp(instance_root: Path) -> str:
+    kvp = instance_root / "GenericModule.kvp"
+    if not kvp.exists():
+        raise FileNotFoundError(f"GenericModule.kvp not found at {kvp}")
+
+    app_settings_json = None
+    for raw in kvp.read_text(encoding="utf-8", errors="ignore").splitlines():
+        if raw.startswith("App.AppSettings="):
+            app_settings_json = raw.split("=", 1)[1].strip()
+            break
+
+    if not app_settings_json:
+        raise RuntimeError(f"No App.AppSettings line found in {kvp}")
+
+    settings = json.loads(app_settings_json)
+    token = settings.get("AccessToken")
+    if not token:
+        raise RuntimeError(f"No AccessToken found in {kvp}")
+    return str(token).strip()
 
 
 def find_amp_root(start: Path) -> Optional[Path]:
@@ -253,6 +274,13 @@ def main() -> int:
     if not mod_ids:
         print("No mod IDs found in Mods.txt", file=sys.stderr)
         return 1
+
+    if not args.token:
+        amp_root_for_token = args.amp_root or find_amp_root(args.content_dir) or find_amp_root(Path.cwd())
+        if amp_root_for_token is None:
+            print("No token supplied and AMP root could not be discovered.", file=sys.stderr)
+            return 2
+        args.token = read_token_from_amp(amp_root_for_token)
 
     headers = build_headers(args.token, args.token_mode, args.platform)
     args.content_dir.mkdir(parents=True, exist_ok=True)
