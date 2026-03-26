@@ -11,7 +11,7 @@
         "UpdateStageName": "Workshop Download Directory Creation",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}insurgencysandstorm/581330/steamapps/workshop/content/581330",
+        "UpdateSourceArgs": "{{$FullBaseDir}}insurgencysandstorm/581330/Steam/steamapps/workshop/content/581330",
         "SkipOnFailure": false
     },
     {
