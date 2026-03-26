@@ -19,4 +19,13 @@ Edit these files here:
 
 In AMP, the matching server setting is `mod.io Access Token`.
 
+To seed the server mods directly, use `scripts/modio_download_mods.py` with:
+
+```bash
+python3 scripts/modio_download_mods.py \
+  --mods-file /AMP/insurgencysandstorm/581330/Insurgency/Config/Server/Mods.txt \
+  --content-dir /AMP/insurgencysandstorm/581330/Steam/steamapps/workshop/content/581330 \
+  --token "$MODIO_TOKEN"
+```
+
 When publishing to AMP's configuration repository, the same files must be placed at the repository root with the same lowercase names.
