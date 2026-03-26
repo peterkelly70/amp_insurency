@@ -29,28 +29,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "GameUserSettings Download",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/peterkelly70/amp_insurency/main/insurgency_sandstorm_customgameusersettings.ini",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Insurgency/Saved/Config/WindowsServer",
-        "UpdateSourceArgs": "GameUserSettings.ini",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "GameUserSettings Download",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/peterkelly70/amp_insurency/main/insurgency_sandstorm_customgameusersettings.ini",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Insurgency/Saved/Config/LinuxServer",
-        "UpdateSourceArgs": "GameUserSettings.ini",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "mod.io Directory Creation",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "CreateDirectory",
