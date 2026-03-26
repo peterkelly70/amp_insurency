@@ -258,21 +258,19 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Use Default Startup Command Line",
+        "DisplayName": "Startup Command Line",
         "Category": "Insurgency Sandstorm:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Select the stock startup command line or your custom override. Checked = use the default command line shown below. Unchecked = use the custom command line field.",
-        "Keywords": "startup,command,line,args,override,default,custom",
+        "Description": "The actual startup command line passed to Sandstorm.",
+        "Keywords": "startup,command,line,args",
         "FieldName": "StartupCommandLine",
-        "InputType": "checkbox",
+        "InputType": "text",
         "IsFlagArgument": false,
         "ParamFieldName": "StartupCommandLine",
         "IncludeInCommandLine": true,
-        "DefaultValue": "True",
-        "EnumValues": {
-            "True": "{{DefaultStartupCommandLine}}",
-            "False": "{{CustomStartupCommandLine}}"
-        }
+        "DefaultValue": "{{DefaultStartupCommandLine}}",
+        "Placeholder": "Embassy?Scenario=Scenario_Embassy_Checkpoint_Security?Lighting=Day?Game=Checkpoint?Hostname=\"My Server\" -Port=27102 -QueryPort=27131 -Rcon -RconPassword=... -RconListenPort=27015 -log -GameStats -GameStatsToken=... -GSLTToken=... -NoEAC {{$FormattedArgs}}",
+        "EnumValues": {}
     },
     {
         "DisplayName": "Default Startup Command Line",
